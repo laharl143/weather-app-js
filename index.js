@@ -6,13 +6,13 @@ const error404 = document.querySelector('.not-found');
 
 search.addEventListener('click', () => {
 
-    const APIKey = '728b0ee6df5687559812bd3169ad77b7';
+    const APIKey = 'e354898dddb8f14089e4162280f99989';
     const city = document.querySelector('.search-box input').value;
 
     if (city === '')
         return;
-
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`)
+//https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}`)
         .then(response => response.json())
         .then(json => {
 
